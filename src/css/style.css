@@ -1,5 +1,6 @@
     body, html {
       height: 100%;
+      width: 100%;
       margin: 0;
       font-family: 'Nunito', sans-serif !important;
     }
@@ -9,6 +10,7 @@
       background-image: url("../../img/FondoXcoti.jpg");
       background-position: center;
       background-size: cover;
+      max-width: 100%;
       height: 758px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
@@ -18,7 +20,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      max-width: 100%;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.5); /* Cambia el color y la opacidad según necesites */
       z-index: 1; /* Asegura que esta capa esté por debajo del contenido */
@@ -29,16 +31,6 @@
       z-index: 2; /* Coloca el contenido por encima de la capa de opacidad */
     }
     
-
-    .hero-section {
-      background-image: url("../../img/FondoXcoti.jpg");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
     .custom-navbar {
       border: 2px solid #e0dfdf; /* Ancho, estilo y color del borde */
       background-color: white;
@@ -76,7 +68,7 @@
     }
 
     .nav-link:hover {
-      color: #007bff;
+      color: #8C30F5 !important;
     }
 
     .position-absolute {
@@ -102,8 +94,8 @@
     }
 
     .btn-primary {
-      background-color: #8C30F5;
-      border-color: #8C30F5;
+      background-color: #8C30F5 !important;
+      border-color: #8C30F5 !important;
       width: 536px;
     }
 
@@ -149,8 +141,8 @@
     }
 
     .presentation-section {
-  padding: 2em 0;
-}
+      padding: 2em 0;
+    }
 
 .presentation-section .container {
   max-width: 1200px;
@@ -216,16 +208,6 @@
 .content {
   flex: 1;
 }
-/* Orden para dispositivos medianos y grandes */
-/*@media (min-width: 768px) {
-  .presentation-section .order-md-1 {
-    order: 1;
-  }
-  
-  .presentation-section .order-md-2 {
-    order: 2;
-  }
-}*/
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -294,7 +276,7 @@
 .carousel-control-next {
   width: 5%;
 }
-.carousel-control-prev-icon::after,
+/*.carousel-control-prev-icon::after,
 .carousel-control-next-icon::after {
   content: '';
   display: inline-block;
@@ -311,6 +293,7 @@
   transform: rotate(-45deg);
   margin-right: -3px;
 }
+*/
 .custom-carousel {
   background: white;
   padding: 20px;
@@ -329,10 +312,17 @@
 /* Responsivo para iPhone 15 Pro */
 /* Ajustes específicos para móviles */
 @media (max-width: 767.98px) {
+
+  .custom-navbar {
+    border: 2px solid #e0dfdf; /* Ancho, estilo y color del borde */
+    background-color: white;
+  }
+
   .fondoXcoti {
     padding: 20px;
-    text-align: center;
-    height: 507px;
+    text-align: center !important;
+    width: 883px;
+    height: 528px;
   }
 
   .fondoXcoti h1 {
@@ -369,6 +359,7 @@
     margin-bottom: 1px !important; /* Reduce el espacio entre cada bloque */
     height: 30px !important;
     margin-left: 20px !important;
+    width: auto !important;
   }
 
   .custom-carousel {
@@ -415,10 +406,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 100px;
+    padding-left: 50px;
+  }
+  .btn-primary {
+    background-color: #8C30F5;
+    border-color: #8C30F5;
+    width: 206px;
   }
 }
-
 
 
 /* Responsivo para MacBook 14 Pro */
